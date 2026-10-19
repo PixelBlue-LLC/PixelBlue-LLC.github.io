@@ -35,11 +35,9 @@ pixelbluellc.com 由三家服务分工：
 | TXT | `@` | `google-site-verification=…` |
 | TXT | `cf2024-1._domainkey` | Cloudflare 的 DKIM（邮件相关，保留） |
 
-### 可删除
+### 已删除
 
-| 类型 | 名称 | 说明 |
-|---|---|---|
-| TXT ×2 | `_acme-challenge` | 旧 Northwest 主机签 SSL 证书用的，迁走后无用 |
+- TXT ×2 `_acme-challenge`：旧 Northwest 主机签 SSL 证书用的，2026-10-19 删除。当前共 16 条记录。
 
 ## GitHub 设置
 
@@ -51,7 +49,7 @@ pixelbluellc.com 由三家服务分工：
 
 - Domain Status / Plan：Active；Nameserver：Cloudflare（**不要改回去**，邮箱和网站都依赖 Cloudflare 上的记录）。
 - Registrar Lock：Off → 2026-10-19 已发邮件请 Northwest 开启（也可以在后台自己开）。
-- Domain Privacy：建议开启（免费），隐藏 WHOIS 公开信息。
+- Domain Privacy：2026-10-19 已开启（免费），WHOIS 不公开联系人信息。
 - Domain Parking：保持 Off。
 - Hosting：免费的 Website Hosting 套餐，上面有 agency 建的旧 WordPress（66.223.49.89，用户名 admin）。已请 Northwest 先备份再删除。
 - 域名联系邮箱保持用**不依赖本域名**的邮箱，否则域名出问题时收不到通知。
@@ -74,6 +72,7 @@ pixelbluellc.com 由三家服务分工：
   3. GitHub DNS check 通过 → 证书签发 → 勾选 Enforce HTTPS。
   4. 在组织层面验证域名（加 `_github-pages-challenge` TXT）。
   5. 网站上 Prec 从“Coming soon”改为已上架，加 App Store 链接。
+  6. 收尾：开 Domain Privacy、删 `_acme-challenge` 记录、GitHub 组织资料填网站地址；给 Northwest 发邮件处理旧 WordPress 和 Registrar Lock。
 - 3 月时的背景：当时 DNS 还在 Northwest，Google Workspace 的 MX 记录是请 Northwest 客服加的；切到 Cloudflare 时这些记录被自动复制过来，所以邮箱一直正常。
 
 ### 以后改 DNS 前先确认

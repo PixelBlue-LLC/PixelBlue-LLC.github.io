@@ -153,3 +153,6 @@ article.post ul { padding-left: 22px; }
 .site-footer a { color: var(--ink-soft); text-decoration: none; }
 .site-footer a:hover { color: var(--deep); }
 .site-footer p { margin: 0; }
+
+.row .row-link { margin-top: 12px; }
+.row-link a { font-weight: 600; color: var(--deep); }

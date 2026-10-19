@@ -6,6 +6,7 @@ It is plain static HTML with no build step. Edit a page, commit to `main`, and G
 
 ```
 index.html          Home
+products/           Products index and one page per product (prec.html)
 services.html       Services
 about.html          About
 contact.html        Contact

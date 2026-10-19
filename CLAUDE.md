@@ -23,8 +23,10 @@ pixelbluellc.com 的源码。纯静态 HTML，**没有构建步骤**，推到 `m
 ```
 Website/
 ├── index.html  services.html  about.html  contact.html  404.html
+├── products/             产品列表 index.html + 每个产品一个详情页（prec.html）
 ├── blog/                 博客列表 index.html + 每篇一个 .html
 ├── assets/               style.css、logo.svg（像素 PB）、favicon.svg
+│   └── products/prec/    Prec 的图标（icon.svg）
 ├── CNAME                 pixelbluellc.com —— 不要删，删了自定义域名会失效
 ├── _config.yml           把 README.md、CLAUDE.md、docs/ 排除在发布之外
 ├── README.md             英文简介
@@ -36,13 +38,17 @@ Website/
 
 ## 3. 怎么改网站
 
-- **页头导航和页脚在每个页面里各复制了一份**（共 8 个 HTML 文件）。改导航、页脚、邮箱时要把所有页面一起改，可以用 `grep -rl` 找到再批量替换。
+- **页头导航和页脚在每个页面里各复制了一份**（共 10 个 HTML 文件）。导航顺序：Home / Products / Services / About / Blog / Contact。改导航、页脚、邮箱时要把所有页面一起改，可以用 `grep -rl` 找到再批量替换。
 - 样式全部在 `assets/style.css`，顶部 `:root` 是颜色变量：
   - `--ink #14213D`（正文）、`--deep #16388A`（主色/按钮）、`--blue #2F64D6`（强调）、`--pale #DCE8FA`（浅底）、`--line #D8E1EE`（分隔线）
   - 字体：Schibsted Grotesk（Google Fonts）
 - 首页右侧的像素 PB 是内联 SVG，`rect.on` 是字母像素（加载时有一次动画，尊重“减少动态效果”设置）。
 - **加博客文章**：复制一篇 `blog/*.html` 改内容，再在 `blog/index.html` 的列表最上面加一条。日期写 `<time datetime="YYYY-MM-DD">`。
-- 产品状态（首页“What we're building”）要和实际一致：
+- **Products 页**（`products/index.html`）刻意保持简洁：每个产品一行（图标、名字、一句话、链接或状态），不放截图和参数。
+- **产品详情页**不要做成 App Store 那种样式（图标 + 参数栏 + 截图条）。详情页**统一用公司配色**（2026-10-19 用户决定，不用产品自己的配色）；`body.theme-prec` 只是把页面变量映射到公司颜色。文案用该产品品牌文档的语气，首屏是一个可以勾选和点“Ready for Next Time”的小清单演示（页面底部的内联脚本）。
+- **Prec 发新版本时**改 `products/prec.html` 两处：首屏下方的版本号，以及“Release notes”最上面加一条（版本号、月份、一句话概括、App Store 的 What's New 条目）。What's New 原文在 `../Prec/docs/RELEASE-x.x.md`。
+- **加新产品**（如 MultiDock 公开发布后）：`products/` 下新建详情页（参考 `prec.html` 的结构，同样用公司配色），在 `products/index.html` 加一行，首页“What we're building”也加一行。
+- 产品状态（首页“What we're building”和 Products 页的“In the works”）要和实际一致：
   - Prec：On the App Store，链接 https://apps.apple.com/us/app/prec/id6771575207
   - Family Care Coordination：In research（还没代码）
   - Housekeeping Route Scheduling：Planned

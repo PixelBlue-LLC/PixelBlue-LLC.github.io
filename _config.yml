@@ -1,0 +1,6 @@
+# GitHub Pages settings.
+# The site is plain HTML; this file only keeps project notes out of the published site.
+exclude:
+  - README.md
+  - CLAUDE.md
+  - docs/

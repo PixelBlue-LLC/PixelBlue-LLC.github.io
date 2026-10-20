@@ -4,7 +4,7 @@ pixelbluellc.com 由三家服务分工：
 
 | 层 | 服务 | 作用 | 费用 |
 |---|---|---|---|
-| 域名注册 | Northwest Registered Agent | 域名归属与续费（2026-02-28 注册，**2027-02-28 到期**） | 随注册代理服务附送 |
+| 域名注册 | Northwest Registered Agent | 域名归属与续费（2026-02-28 注册，**2027-02-28 自动续费**） | 随注册代理服务附送（已确认免费续费） |
 | DNS | Cloudflare（免费版，nameserver `hope` / `thomas.ns.cloudflare.com`） | 网站、邮箱的解析记录 | 免费 |
 | 网站托管 | GitHub Pages（仓库 `PixelBlue-LLC/PixelBlue-LLC.github.io`） | 静态网页 + HTTPS 证书 | 免费 |
 | 邮箱 | Google Workspace | info@pixelbluellc.com | 另计 |
@@ -52,12 +52,12 @@ pixelbluellc.com 由三家服务分工：
 - Domain Privacy：2026-10-19 已开启（免费），WHOIS 不公开联系人信息。
 - Domain Parking：保持 Off。
 - Hosting：免费的 Website Hosting 套餐（agency 建的旧 WordPress，66.223.49.89）**已于 2026-10-20 取消**。取消前 Northwest 提供了完整备份（网站文件 + 数据库），存在本机 `~/Documents/PixelBlue-LLC/_archive/transfer-01a15a16/`，**不进 Git**（含 `wp-config.php` 数据库密码）。备份里只有 3 个模板占位页面、无图片、1 条垃圾表单提交，没有需要迁移的内容。
-- 域名续费：还在等 Northwest 确认是否包含在注册代理服务里（到期 2027-02-28，最晚 2027-01 问清楚）。
+- 域名续费：Northwest 2026-10-20 书面确认：到期日 2027-02-28 **自动续费，不额外收费**；取消主机不影响域名注册和注册代理服务；nameserver 保持 Cloudflare；Registrar Lock 保持开启。
 - 域名联系邮箱保持用**不依赖本域名**的邮箱，否则域名出问题时收不到通知。
 
 ### 要不要把域名转到 Cloudflare Registrar？（2026-10-19 结论：暂不转）
 
-- 现在：只要继续用 Northwest 的注册代理服务，续费包含在内（以 Northwest 回信确认为准）。
+- 现在：继续用 Northwest 的注册代理服务，域名续费免费（2026-10-20 Northwest 书面确认）。
 - Cloudflare Registrar：.com 注册/续费/转入约 $10.46/年（成本价）。
 - 什么时候转：不再用 Northwest 做注册代理时。提前 1–2 个月处理（到期 2027-02-28）。流程：Northwest 关 Registrar Lock → 生成授权码（像密码一样保管）→ 在 Cloudflare 发起转入。转移时 nameserver 不变，网站和邮箱不中断。
 

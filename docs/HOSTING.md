@@ -48,10 +48,11 @@ pixelbluellc.com 由三家服务分工：
 ## Northwest 账户状态
 
 - Domain Status / Plan：Active；Nameserver：Cloudflare（**不要改回去**，邮箱和网站都依赖 Cloudflare 上的记录）。
-- Registrar Lock：Off → 2026-10-19 已发邮件请 Northwest 开启（也可以在后台自己开）。
+- Registrar Lock：**On**（2026-10-20 Northwest 确认已开启）。以后要转移域名时才关。
 - Domain Privacy：2026-10-19 已开启（免费），WHOIS 不公开联系人信息。
 - Domain Parking：保持 Off。
-- Hosting：免费的 Website Hosting 套餐，上面有 agency 建的旧 WordPress（66.223.49.89，用户名 admin）。已请 Northwest 先备份再删除。
+- Hosting：免费的 Website Hosting 套餐（agency 建的旧 WordPress，66.223.49.89）**已于 2026-10-20 取消**。取消前 Northwest 提供了完整备份（网站文件 + 数据库），存在本机 `~/Documents/PixelBlue-LLC/_archive/transfer-01a15a16/`，**不进 Git**（含 `wp-config.php` 数据库密码）。备份里只有 3 个模板占位页面、无图片、1 条垃圾表单提交，没有需要迁移的内容。
+- 域名续费：还在等 Northwest 确认是否包含在注册代理服务里（到期 2027-02-28，最晚 2027-01 问清楚）。
 - 域名联系邮箱保持用**不依赖本域名**的邮箱，否则域名出问题时收不到通知。
 
 ### 要不要把域名转到 Cloudflare Registrar？（2026-10-19 结论：暂不转）
@@ -73,6 +74,7 @@ pixelbluellc.com 由三家服务分工：
   4. 在组织层面验证域名（加 `_github-pages-challenge` TXT）。
   5. 网站上 Prec 从“Coming soon”改为已上架，加 App Store 链接。
   6. 收尾：开 Domain Privacy、删 `_acme-challenge` 记录、GitHub 组织资料填网站地址；给 Northwest 发邮件处理旧 WordPress 和 Registrar Lock。
+  7. 2026-10-20：Northwest 开启 Registrar Lock → 发来 WordPress 备份（已检查，无可迁移内容）→ 取消旧主机。取消后检查网站、NS、MX、A 记录全部正常。
 - 3 月时的背景：当时 DNS 还在 Northwest，Google Workspace 的 MX 记录是请 Northwest 客服加的；切到 Cloudflare 时这些记录被自动复制过来，所以邮箱一直正常。
 
 ### 以后改 DNS 前先确认

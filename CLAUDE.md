@@ -78,7 +78,8 @@ Website/
 ## 6. 待办
 
 - [ ] Prec 下次发版时，把 App Store Connect 的 Privacy Policy URL 改成 `https://pixelbluellc.com/prec-privacy/privacy-policy.html`（只能随新版本改；旧 github.io 链接仍可用）
-- [ ] 等 Northwest 回复：WordPress 备份、删除 WordPress 主机、开启 Registrar Lock、确认域名续费包含在注册代理服务里（2026-10-19 已发邮件）
+- [x] Northwest：开启 Registrar Lock、WordPress 备份（存 `../_archive/`，不进 Git）、取消旧主机（2026-10-20）
+- [ ] Northwest：确认域名续费是否包含在注册代理服务里（到期 2027-02-28）
 - [x] 在 Northwest 开启 Domain Privacy（2026-10-19）
 - [x] Cloudflare 删除两条 `_acme-challenge` TXT 记录（2026-10-19）
 - [ ] 商业计划书封面的 pixelbluellcus.com / info@pixelbluellcus.com 改成 pixelbluellc.com

@@ -10,5 +10,33 @@
     <description>Updates for TandemDock</description>
     <language>en</language>
     <!-- items -->
+    <item>
+      <title>Version 1.5.1</title>
+      <pubDate>Fri, 23 Oct 2026 21:47:29 +0000</pubDate>
+      <sparkle:version>17</sparkle:version>
+      <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+<ul>
+  <li>A clearer installer: the disk image now shows where to drag TandemDock.</li>
+</ul>
+      ]]></description>
+      <enclosure url="https://github.com/PixelBlue-LLC/TandemDock-releases/releases/download/v1.5.1/TandemDock.dmg" type="application/octet-stream" sparkle:edSignature="ZobFgyGQe16y7qzhh8KFr8N550ZZ7vBbmSe8WNrk8U6Gfg+n3Xk3tLlU7M9BWb4y6ZAG/M33qYy5W0TMqlWlDw==" length="2218101"/>
+    </item>
+    <item>
+      <title>Version 1.5.0</title>
+      <pubDate>Fri, 23 Oct 2026 21:31:28 +0000</pubDate>
+      <sparkle:version>16</sparkle:version>
+      <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+<ul>
+  <li>Automatic updates: TandemDock checks for new versions once a day and lets you know in the menu bar.</li>
+  <li>A new app icon.</li>
+  <li>Links to the privacy policy and license terms in Settings › About.</li>
+</ul>
+      ]]></description>
+      <enclosure url="https://github.com/PixelBlue-LLC/TandemDock-releases/releases/download/v1.5.0/TandemDock.dmg" type="application/octet-stream" sparkle:edSignature="lQjrAmA6+HSpj3h3Z9DEsiRd5Y9nGNx45jmfdzhCV11py39KrCGwKZ8DZLrO8xJEr9F1FINFvn2BthluoURFCA==" length="2577971"/>
+    </item>
   </channel>
 </rss>

@@ -22,7 +22,7 @@ pixelbluellc.com 的源码。纯静态 HTML，**没有构建步骤**，推到 `m
 
 ```
 Website/
-├── index.html  services.html  about.html  contact.html  404.html
+├── index.html  services.html  about.html  contact.html  404.html  legal.html（Privacy and Terms 总页，列出每个产品的隐私政策和条款）
 ├── products/             产品列表 index.html + 每个产品一个详情页（prec.html、tandemdock.html）
 │                         + TandemDock 的隐私政策 tandemdock-privacy.html 和授权条款 tandemdock-terms.html
 ├── blog/                 博客列表 index.html + 每篇一个 .html
@@ -40,7 +40,7 @@ Website/
 
 ## 3. 怎么改网站
 
-- **页头导航和页脚在每个页面里各复制了一份**（共 10 个 HTML 文件）。导航顺序：Home / Products / Services / About / Blog / Contact。改导航、页脚、邮箱时要把所有页面一起改，可以用 `grep -rl` 找到再批量替换。
+- **页头导航和页脚在每个页面里各复制了一份**（共 15 个 HTML 文件）。导航顺序：Home / Products / Services / About / Blog / Contact。**页脚所有页面一样**（2026-10-23 统一）：版权 · 公司邮箱 · “Privacy and Terms”（`/legal.html`）。新产品的隐私政策、条款加到 `legal.html`，不要再往页脚里加产品链接；产品页正文里可以直接链自己的政策。改导航、页脚、邮箱时要把所有页面一起改，可以用 `grep -rl` 找到再批量替换。
 - 样式全部在 `assets/style.css`，顶部 `:root` 是颜色变量：
   - `--ink #14213D`（正文）、`--deep #16388A`（主色/按钮）、`--blue #2F64D6`（强调）、`--pale #DCE8FA`（浅底）、`--line #D8E1EE`（分隔线）
   - 字体：Schibsted Grotesk（Google Fonts）

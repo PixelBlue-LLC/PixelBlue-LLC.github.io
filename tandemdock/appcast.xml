@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TandemDock update feed for Sparkle. The app reads it from
+     https://pixelbluellc.com/tandemdock/appcast.xml (SUFeedURL in its Info.plist).
+     Items are added by scripts/publish.sh in the TandemDock repo, newest first,
+     right below the marker. Don't remove the marker. -->
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>TandemDock</title>
+    <link>https://pixelbluellc.com/products/tandemdock.html</link>
+    <description>Updates for TandemDock</description>
+    <language>en</language>
+    <!-- items -->
+  </channel>
+</rss>

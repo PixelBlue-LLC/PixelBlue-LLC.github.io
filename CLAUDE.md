@@ -28,6 +28,7 @@ Website/
 ├── blog/                 博客列表 index.html + 每篇一个 .html
 ├── assets/               style.css、logo.svg（像素 PB）、favicon.svg
 │   └── products/         每个产品的图标：prec/icon.svg、tandemdock/icon.svg
+├── tandemdock/appcast.xml  TandemDock 的 Sparkle 更新源（App 每天读一次）；条目由 TandemDock 仓库的 scripts/publish.sh 加，`<!-- items -->` 标记不能删
 ├── CNAME                 pixelbluellc.com —— 不要删，删了自定义域名会失效
 ├── _config.yml           把 README.md、CLAUDE.md、docs/ 排除在发布之外
 ├── README.md             英文简介

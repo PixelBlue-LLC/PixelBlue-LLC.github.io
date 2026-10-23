@@ -49,16 +49,16 @@ Website/
 - **Products 页**（`products/index.html`）刻意保持简洁：每个产品一行（图标、名字、一句话、链接或状态），不放截图和参数。
 - **产品详情页**不要做成 App Store 那种样式（图标 + 参数栏 + 截图条）。详情页**统一用公司配色**（2026-10-19 用户决定，不用产品自己的配色）；`body.theme-prec` 只是把页面变量映射到公司颜色。文案用该产品品牌文档的语气，首屏是一个可以勾选和点“Ready for Next Time”的小清单演示（页面底部的内联脚本）。
 - **Prec 发新版本时**改 `products/prec.html` 两处：首屏下方的版本号，以及“Release notes”最上面加一条（版本号、月份、一句话概括、App Store 的 What's New 条目）。What's New 原文在 `../Prec/docs/RELEASE-x.x.md`。
-- **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。现在是 **Coming soon**：主按钮是 `mailto:` 发邮件“告诉我上线”，没有下载和价格。
+- **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。发布版（`tandemdock-launch` 分支）：主按钮 “Download for Mac” 指向 `https://github.com/PixelBlue-LLC/TandemDock-releases/releases/latest/download/TandemDock.dmg`（永远是最新版），旁边 “Buy Pro · $9.99”；首屏下方写版本号；有 Install 步骤和 Release notes。**合并前要把两个 Buy 链接换成 Lemon Squeezy 正式模式的付款链接**（页面里有 `LAUNCH:` 注释），版本号对上实际发布的版本。
   - 正式发布时要改：状态改成 Available（首页、Products 页、详情页三处）；主按钮换成下载 DMG；加 “Buy Pro” 按钮（Lemon Squeezy 付款链接）；首屏下方写版本号；加 Release notes（照 Prec 页）。
   - **隐私政策和条款**（2026-10-23）：`products/tandemdock-privacy.html`、`products/tandemdock-terms.html`，TandemDock 页和这两页的页脚有链接，App 的 About 页也链到这里。条款里的数字是用户定的：一人最多 3 台 Mac、14 天无理由退款、加州法律。App 联网行为变了（如接入 Sparkle）要一起改隐私政策。
-  - 页面上**不写具体价格**，直到 Lemon Squeezy 定价确定。
+  - 价格 $9.99（Lemon Squeezy 已定），发布版页面上写明。
   - 图标 `assets/products/tandemdock/icon.svg` 和 App 图标是同一张图（2026-10-22 定稿方案 F4，原稿在 TandemDock 仓库 `Support/AppIcon.svg`）。App 图标改了，这里要一起换。
 - **加新产品**：`products/` 下新建详情页（参考 `prec.html` 的结构，同样用公司配色），在 `products/index.html` 加一行，首页“What we're building”也加一行。
 - 产品状态（首页“What we're building”和 Products 页的“In the works”）要和实际一致：
   - Prec：On the App Store，链接 https://apps.apple.com/us/app/prec/id6771575207
   - Family Care Coordination：In research（还没代码）
-  - TandemDock：Coming soon（2026-10-19 用户要求挂到 Products 下；App 还没发布）
+  - TandemDock：Available（`tandemdock-launch` 分支，2026-10-23 准备；合并时 App 正式发布）
   - Housekeeping Route Scheduling：Planned
 - TandemDock（原名 MultiDock）的上架计划见 `../TandemDock/docs/LAUNCH-PLAN.md`。名字中间考虑过 Everydock，因 GitHub 上已有同名开源 App 放弃，网站上从未出现过。
 - 网站文字用英文；`CLAUDE.md` 和 `docs/` 用中文。

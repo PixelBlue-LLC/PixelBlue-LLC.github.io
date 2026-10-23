@@ -24,6 +24,7 @@ pixelbluellc.com 的源码。纯静态 HTML，**没有构建步骤**，推到 `m
 Website/
 ├── index.html  services.html  about.html  contact.html  404.html
 ├── products/             产品列表 index.html + 每个产品一个详情页（prec.html、tandemdock.html）
+│                         + TandemDock 的隐私政策 tandemdock-privacy.html 和授权条款 tandemdock-terms.html
 ├── blog/                 博客列表 index.html + 每篇一个 .html
 ├── assets/               style.css、logo.svg（像素 PB）、favicon.svg
 │   └── products/         每个产品的图标：prec/icon.svg、tandemdock/icon.svg
@@ -48,7 +49,8 @@ Website/
 - **产品详情页**不要做成 App Store 那种样式（图标 + 参数栏 + 截图条）。详情页**统一用公司配色**（2026-10-19 用户决定，不用产品自己的配色）；`body.theme-prec` 只是把页面变量映射到公司颜色。文案用该产品品牌文档的语气，首屏是一个可以勾选和点“Ready for Next Time”的小清单演示（页面底部的内联脚本）。
 - **Prec 发新版本时**改 `products/prec.html` 两处：首屏下方的版本号，以及“Release notes”最上面加一条（版本号、月份、一句话概括、App Store 的 What's New 条目）。What's New 原文在 `../Prec/docs/RELEASE-x.x.md`。
 - **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。现在是 **Coming soon**：主按钮是 `mailto:` 发邮件“告诉我上线”，没有下载和价格。
-  - 正式发布时要改：状态改成 Available（首页、Products 页、详情页三处）；主按钮换成下载 DMG；加 “Buy Pro” 按钮（Lemon Squeezy 付款链接）；首屏下方写版本号；加 Release notes（照 Prec 页）；页脚加 TandemDock 隐私政策链接。
+  - 正式发布时要改：状态改成 Available（首页、Products 页、详情页三处）；主按钮换成下载 DMG；加 “Buy Pro” 按钮（Lemon Squeezy 付款链接）；首屏下方写版本号；加 Release notes（照 Prec 页）。
+  - **隐私政策和条款**（2026-10-23）：`products/tandemdock-privacy.html`、`products/tandemdock-terms.html`，TandemDock 页和这两页的页脚有链接，App 的 About 页也链到这里。条款里的数字是用户定的：一人最多 3 台 Mac、14 天无理由退款、加州法律。App 联网行为变了（如接入 Sparkle）要一起改隐私政策。
   - 页面上**不写具体价格**，直到 Lemon Squeezy 定价确定。
   - 图标 `assets/products/tandemdock/icon.svg` 和 App 图标是同一张图（2026-10-22 定稿方案 F4，原稿在 TandemDock 仓库 `Support/AppIcon.svg`）。App 图标改了，这里要一起换。
 - **加新产品**：`products/` 下新建详情页（参考 `prec.html` 的结构，同样用公司配色），在 `products/index.html` 加一行，首页“What we're building”也加一行。

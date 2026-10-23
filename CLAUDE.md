@@ -50,6 +50,7 @@ Website/
 - **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。现在是 **Coming soon**：主按钮是 `mailto:` 发邮件“告诉我上线”，没有下载和价格。
   - 正式发布时要改：状态改成 Available（首页、Products 页、详情页三处）；主按钮换成下载 DMG；加 “Buy Pro” 按钮（Lemon Squeezy 付款链接）；首屏下方写版本号；加 Release notes（照 Prec 页）；页脚加 TandemDock 隐私政策链接。
   - 页面上**不写具体价格**，直到 Lemon Squeezy 定价确定。
+  - 图标 `assets/products/tandemdock/icon.svg` 和 App 图标是同一张图（2026-10-22 定稿方案 F4，原稿在 TandemDock 仓库 `Support/AppIcon.svg`）。App 图标改了，这里要一起换。
 - **加新产品**：`products/` 下新建详情页（参考 `prec.html` 的结构，同样用公司配色），在 `products/index.html` 加一行，首页“What we're building”也加一行。
 - 产品状态（首页“What we're building”和 Products 页的“In the works”）要和实际一致：
   - Prec：On the App Store，链接 https://apps.apple.com/us/app/prec/id6771575207

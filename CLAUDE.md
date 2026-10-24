@@ -25,6 +25,8 @@ Website/
 ├── index.html  services.html  about.html  contact.html  404.html  legal.html（Privacy and Terms 总页，列出每个产品的隐私政策和条款）
 ├── products/             产品列表 index.html + 每个产品一个详情页（prec.html、tandemdock.html）
 │                         + TandemDock 的隐私政策 tandemdock-privacy.html 和授权条款 tandemdock-terms.html
+│                         + Aheadly（iOS 小组件 App，尚未上架、还没有产品页）的隐私政策 aheadly-privacy.html，
+│                           App 付费墙和 App Store Connect 的 Privacy Policy URL 都指向它；条款用 Apple 标准 EULA
 ├── blog/                 博客列表 index.html + 每篇一个 .html
 ├── assets/               style.css、logo.svg（像素 PB）、favicon.svg
 │   └── products/         每个产品的图标：prec/icon.svg、tandemdock/icon.svg

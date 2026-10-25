@@ -30,6 +30,7 @@ Website/
 ├── blog/                 博客列表 index.html + 每篇一个 .html
 ├── assets/               style.css、logo.svg（像素 PB）、favicon.svg
 │   └── products/         每个产品的图标：prec/icon.svg、tandemdock/icon.svg
+│                         + aheadly/screenshots/：Aheadly 的 5 张商店截图和付费墙截图（2026-10-24，给 App Store Connect 上传用，以后产品页也可以用；原件在 Aheadly 仓库 store/）
 ├── tandemdock/appcast.xml  TandemDock 的 Sparkle 更新源（App 每天读一次）；条目由 TandemDock 仓库的 scripts/publish.sh 加，`<!-- items -->` 标记不能删
 ├── CNAME                 pixelbluellc.com —— 不要删，删了自定义域名会失效
 ├── _config.yml           把 README.md、CLAUDE.md、docs/ 排除在发布之外

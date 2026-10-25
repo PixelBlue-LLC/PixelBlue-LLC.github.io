@@ -1,7 +1,7 @@
 # Website — PixelBlue LLC 公司官网
 
 > 先读总文件夹的 `../CLAUDE.md`（工作规则），再读本文件。
-> 最后更新：2026-10-23（TandemDock 隐私政策、条款、更新源 appcast 上线；所有页面页脚统一 + Privacy and Terms 总页；TandemDock 正式发布页备在 `tandemdock-launch` 分支）。此前 2026-10-19：新增 TandemDock 产品页（Coming soon）；官网从 Northwest 的 WordPress 迁到 GitHub Pages
+> 最后更新：2026-10-25（Aheadly 已提交审核，记在第 3 节产品状态）。此前 2026-10-23（TandemDock 隐私政策、条款、更新源 appcast 上线；所有页面页脚统一 + Privacy and Terms 总页；TandemDock 正式发布页备在 `tandemdock-launch` 分支）。此前 2026-10-19：新增 TandemDock 产品页（Coming soon）；官网从 Northwest 的 WordPress 迁到 GitHub Pages
 
 ---
 
@@ -63,6 +63,7 @@ Website/
   - Family Care Coordination：In research（还没代码）
   - TandemDock：`main` 上 Coming soon；正式发布时（合并 `tandemdock-launch`）改为 Available
   - Housekeeping Route Scheduling：Planned
+  - Aheadly（iOS 日历/提醒小组件，App Store 名 "Aheadly: Calendar Widget"）：2026-10-25 已提交 App Store 审核，网站上还没出现。过审后做产品页 `products/aheadly.html`（同 Prec 的公司配色详情页），截图用 `assets/products/aheadly/screenshots/`，首页和 Products 页加一行 Available + App Store 链接。
 - TandemDock（原名 MultiDock）的上架计划见 `../TandemDock/docs/LAUNCH-PLAN.md`。名字中间考虑过 Everydock，因 GitHub 上已有同名开源 App 放弃，网站上从未出现过。
 - 网站文字用英文；`CLAUDE.md` 和 `docs/` 用中文。
 

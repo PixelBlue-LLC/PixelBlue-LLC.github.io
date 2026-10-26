@@ -86,3 +86,7 @@ Website/
 ## 6. 待办
 
 已移到 Google Sheets「PixelBlue 排期表」的「公司官网」页（2026-10-26）。
+
+## 7. Git 提交署名
+
+提交作者一律用 `Jianxiao Cai <93627186+ShawnCai223@users.noreply.github.com>`（这是公开仓库，所以用 GitHub 的 noreply 邮箱，不用 gmail，免得邮箱公开），这个邮箱绑定 GitHub 账号 ShawnCai223，提交才会计入他的贡献图。不要用 Claude（noreply@anthropic.com）或 PixelBlue LLC（info@pixelbluellc.com）做作者；Claude 参与的提交只在提交信息末尾加 `Co-Authored-By:` 行。云端会话提交时用 `git -c user.name="Jianxiao Cai" -c user.email=93627186+ShawnCai223@users.noreply.github.com commit …`。只有默认分支 `main` 上的提交计入贡献图，其他分支用完要合并回 `main`。

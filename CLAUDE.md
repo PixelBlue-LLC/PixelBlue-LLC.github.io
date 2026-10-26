@@ -1,7 +1,7 @@
 # Website — PixelBlue LLC 公司官网
 
-> 先读总文件夹的 `../CLAUDE.md`（工作规则），再读本文件。
-> 最后更新：2026-10-25（Aheadly 已提交审核，记在第 3 节产品状态）。此前 2026-10-23（TandemDock 隐私政策、条款、更新源 appcast 上线；所有页面页脚统一 + Privacy and Terms 总页；TandemDock 正式发布页备在 `tandemdock-launch` 分支）。此前 2026-10-19：新增 TandemDock 产品页（Coming soon）；官网从 Northwest 的 WordPress 迁到 GitHub Pages
+> 先读总文件夹的 `../CLAUDE.md`（工作规则），再读本文件。**进度和待办看 Google Sheets「PixelBlue 排期表」**（链接在 `../CLAUDE.md` 第 3 节）。
+> 最后更新：2026-10-26（待办改记在排期表；本机路径改为 `~/PixelBlue-LLC/Website`）
 
 ---
 
@@ -13,7 +13,7 @@ pixelbluellc.com 的源码。纯静态 HTML，**没有构建步骤**，推到 `m
 |---|---|
 | 网址 | https://pixelbluellc.com （HTTPS 已强制） |
 | GitHub 仓库 | `PixelBlue-LLC/PixelBlue-LLC.github.io`（**公开**，组织主页仓库） |
-| 本机路径 | `~/Documents/PixelBlue-LLC/Website` |
+| 本机路径 | `~/PixelBlue-LLC/Website` |
 | 托管 | GitHub Pages，`main` 分支 `/ (root)`，免费 |
 | DNS | Cloudflare（免费版），记录见 `docs/HOSTING.md` |
 | 域名注册商 | Northwest Registered Agent（随注册代理服务附送） |
@@ -72,7 +72,7 @@ Website/
 1. 改文件（本机或云端 clone）。
 2. 用户说“提交/推送”后 commit 并 push 到 `main`。云端代理可以推分支到这个仓库。
 3. 等 1–2 分钟，打开 https://pixelbluellc.com 检查。
-4. 本机副本同步：用户在终端 `cd ~/Documents/PixelBlue-LLC/Website && git pull`（本机已用 `gh` 登录）。
+4. 本机副本同步：用户在终端 `cd ~/PixelBlue-LLC/Website && git pull`（本机已用 `gh` 登录）。
 
 本地预览：`cd Website && python3 -m http.server 8000`，浏览器开 http://localhost:8000 。页面用的是 `/assets/...` 绝对路径，直接双击 HTML 文件打开会没有样式。
 
@@ -85,12 +85,4 @@ Website/
 
 ## 6. 待办
 
-- [ ] Prec 下次发版时，把 App Store Connect 的 Privacy Policy URL 改成 `https://pixelbluellc.com/prec-privacy/privacy-policy.html`（只能随新版本改；旧 github.io 链接仍可用）
-- [x] Northwest：开启 Registrar Lock、WordPress 备份（存 `../_archive/`，不进 Git）、取消旧主机（2026-10-20）
-- [x] Northwest：确认域名 2027-02-28 自动免费续费，注册代理服务不受影响（2026-10-20）
-- [x] 在 Northwest 开启 Domain Privacy（2026-10-19）
-- [x] Cloudflare 删除两条 `_acme-challenge` TXT 记录（2026-10-19）
-- [ ] 商业计划书封面的 pixelbluellcus.com / info@pixelbluellcus.com 改成 pixelbluellc.com
-- [ ] 审阅网站文字和两篇博客初稿（2026-10-19 由 Claude 根据商业计划书和 Prec 文档撰写）
-- [x] GitHub 组织资料填上网站 https://pixelbluellc.com（2026-10-19）
-- [ ] 可选：`prec-privacy` 仓库的 About 里填上网站
+已移到 Google Sheets「PixelBlue 排期表」的「公司官网」页（2026-10-26）。

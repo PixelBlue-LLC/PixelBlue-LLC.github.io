@@ -48,20 +48,21 @@ Website/
   - `--ink #14213D`（正文）、`--deep #16388A`（主色/按钮）、`--blue #2F64D6`（强调）、`--pale #DCE8FA`（浅底）、`--line #D8E1EE`（分隔线）
   - 字体：Schibsted Grotesk（Google Fonts）
 - 首页右侧的像素 PB 是内联 SVG，`rect.on` 是字母像素（加载时有一次动画，尊重“减少动态效果”设置）。
+- **博客**：现有三篇——Hello from PixelBlue（2026-10-12，末尾加了 11 月 TandemDock 上线的更新说明）、Why we’re building Prec（10-19）、TandemDock is here（11-05，发布公告；开放 Pro 购买后把 “Pro purchases open soon” 那句改掉）。
 - **加博客文章**：复制一篇 `blog/*.html` 改内容，再在 `blog/index.html` 的列表最上面加一条。日期写 `<time datetime="YYYY-MM-DD">`。
 - **Products 页**（`products/index.html`）刻意保持简洁：每个产品一行（图标、名字、一句话、链接或状态），不放截图和参数。
 - **产品详情页**不要做成 App Store 那种样式（图标 + 参数栏 + 截图条）。详情页**统一用公司配色**（2026-10-19 用户决定，不用产品自己的配色）；`body.theme-prec` 只是把页面变量映射到公司颜色。文案用该产品品牌文档的语气，首屏是一个可以勾选和点“Ready for Next Time”的小清单演示（页面底部的内联脚本）。
 - **Prec 发新版本时**改 `products/prec.html` 两处：首屏下方的版本号，以及“Release notes”最上面加一条（版本号、月份、一句话概括、App Store 的 What's New 条目）。What's New 原文在 `../Prec/docs/RELEASE-x.x.md`。
-- **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。`main` 上现在还是 **Coming soon** 版（主按钮 `mailto:`“告诉我上线”，没有下载和价格）。**正式发布版在 `tandemdock-launch` 分支**（2026-10-23 备好，已合并过 `main` 的页脚改动）：Download for Mac（`https://github.com/PixelBlue-LLC/TandemDock-releases/releases/latest/download/TandemDock.dmg`）、Buy Pro · $9.99、版本号、Install 三步、Release notes；首页和 Products 页状态改 Available。**合并前**：把页面里两个 Buy 链接换成 Lemon Squeezy 正式模式的付款链接（有 `LAUNCH:` 注释），版本号对上实际发布的版本（计划 1.5.2）。在分支上改完再 `git merge` 进 `main` 推送。
+- **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。**2026-11-05 已发布**（`tandemdock-launch` 分支已合并进 `main`）：首屏 “Download for Mac”（`https://github.com/PixelBlue-LLC/TandemDock-releases/releases/latest/download/TandemDock.dmg`，永远是最新版）、版本号、Install 三步、Release notes。Pro 现在只能试用 14 天，**购买入口用 `PRO PURCHASE:` 注释先藏起来**，等 Lemon Squeezy 审核通过、换上正式付款链接再放出来。
   - 以后每发一个 TandemDock 版本：首屏下方的版本号和 Release notes 最上面加一条（内容同 TandemDock 仓库 `docs/releases/<版本>.html`）；`tandemdock/appcast.xml` 由 `publish.sh` 改，不要手改。
   - **隐私政策和条款**（2026-10-23）：`products/tandemdock-privacy.html`、`products/tandemdock-terms.html`，TandemDock 页正文 “Stays on your Mac” 和 `legal.html` 链到这里，App 的 About 页也链到这里。条款里的数字是用户定的：一人最多 3 台 Mac、14 天无理由退款、加州法律。App 联网行为变了（如接入 Sparkle）要一起改隐私政策。
-  - 价格 $9.99（2026-10-23 已在 Lemon Squeezy 定好）；`main` 的 Coming soon 版不写价格，发布版写。
+  - 价格：Pro 原价 $9.99，开放购买后首发价 $4.99 到 2026-12-31（用户 2026-11-05 定）。**现在页面不写价格**，只写 “Pro purchases open soon”；开放购买时把页面里 `PRO PURCHASE:` 注释的三处加回来（Buy 按钮、Pro 节的购买按钮、Install 下面的授权码说明），并写上价格。
   - 图标 `assets/products/tandemdock/icon.svg` 和 App 图标是同一张图（2026-10-22 定稿方案 F4，原稿在 TandemDock 仓库 `Support/AppIcon.svg`）。App 图标改了，这里要一起换。
 - **加新产品**：`products/` 下新建详情页（参考 `prec.html` 的结构，同样用公司配色），在 `products/index.html` 加一行，首页“What we're building”也加一行。
 - 产品状态（首页“What we're building”和 Products 页的“In the works”）要和实际一致：
   - Prec：On the App Store，链接 https://apps.apple.com/us/app/prec/id6771575207
   - Family Care Coordination：In research（还没代码）
-  - TandemDock：`main` 上 Coming soon；正式发布时（合并 `tandemdock-launch`）改为 Available
+  - TandemDock：**已发布（2026-11-05，1.5.2，免费下载 + 14 天 Pro 试用，Pro 购买等 Lemon Squeezy 审核通过再开）**。首页状态写 “Free for Mac”；Products 页不放状态标志（2026-11-05 用户要求删掉 Available，和 Prec 一样只留链接）
   - Housekeeping Route Scheduling：Planned
   - Aheadly（iOS 日历/提醒小组件，App Store 名 "Aheadly: Calendar Widget"）：2026-10-25 已提交 App Store 审核，网站上还没出现。过审后做产品页 `products/aheadly.html`（同 Prec 的公司配色详情页），截图用 `assets/products/aheadly/screenshots/`，首页和 Products 页加一行 Available + App Store 链接。
 - TandemDock（原名 MultiDock）的上架计划见 `../TandemDock/docs/LAUNCH-PLAN.md`。名字中间考虑过 Everydock，因 GitHub 上已有同名开源 App 放弃，网站上从未出现过。

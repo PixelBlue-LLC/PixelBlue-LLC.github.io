@@ -43,7 +43,7 @@ Website/
 
 ## 3. 怎么改网站
 
-- **页头导航和页脚在每个页面里各复制了一份**（共 15 个 HTML 文件）。导航顺序：Home / Products / Services / About / Blog / Contact。**页脚所有页面一样**（2026-10-23 统一）：版权 · 公司邮箱 · “Privacy and Terms”（`/legal.html`）。新产品的隐私政策、条款加到 `legal.html`，不要再往页脚里加产品链接；产品页正文里可以直接链自己的政策。改导航、页脚、邮箱时要把所有页面一起改，可以用 `grep -rl` 找到再批量替换。
+- **页头导航和页脚在每个页面里各复制了一份**（共 15 个 HTML 文件）。导航顺序：Home / Products / About / Blog / Services / Contact（2026-11-05 把 Services 挪到后面，弱化接外包）。**页脚所有页面一样**（2026-10-23 统一）：版权 · 公司邮箱 · “Privacy and Terms”（`/legal.html`）。新产品的隐私政策、条款加到 `legal.html`，不要再往页脚里加产品链接；产品页正文里可以直接链自己的政策。改导航、页脚、邮箱时要把所有页面一起改，可以用 `grep -rl` 找到再批量替换。
 - 样式全部在 `assets/style.css`，顶部 `:root` 是颜色变量：
   - `--ink #14213D`（正文）、`--deep #16388A`（主色/按钮）、`--blue #2F64D6`（强调）、`--pale #DCE8FA`（浅底）、`--line #D8E1EE`（分隔线）
   - 字体：Schibsted Grotesk（Google Fonts）
@@ -68,7 +68,7 @@ Website/
 - TandemDock（原名 MultiDock）的上架计划见 `../TandemDock/docs/LAUNCH-PLAN.md`。名字中间考虑过 Everydock，因 GitHub 上已有同名开源 App 放弃，网站上从未出现过。
 - 网站文字用英文；`CLAUDE.md` 和 `docs/` 用中文。
 - **地点**（2026-11-05 用户要求）：只有 Contact 页写具体城市（Sacramento、San Marcos）；其他所有地方（页脚、首页、About、博客、隐私政策和条款的联系方式）只写 “California”。
-- **About 页的重点**是“我们做自己的软件”（产品、做法、What we’ve made），不讲接外包；接项目的内容只放 Services 页。Contact 页不放某个产品的支持说明。
+- **About 页的重点**是“我们做自己的软件”（产品、做法、What we’ve made），不讲接外包；接项目的内容只放 Services 页。首页也以产品为主：简介只说做自己的 App，第二个按钮是 About us，底部是 “Follow along”（博客），接项目只留一行小字链到 Services。Contact 页不放某个产品的支持说明。
 
 ## 4. 发布流程
 

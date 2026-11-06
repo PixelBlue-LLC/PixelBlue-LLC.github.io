@@ -51,6 +51,7 @@ Website/
 - **博客**：现有三篇——Hello from PixelBlue（2026-10-12，末尾加了 11 月 TandemDock 上线的更新说明）、Why we’re building Prec（10-19）、TandemDock is here（11-05，发布公告；开放 Pro 购买后把 “Pro purchases open soon” 那句改掉）。
 - **加博客文章**：复制一篇 `blog/*.html` 改内容，再在 `blog/index.html` 的列表最上面加一条。日期写 `<time datetime="YYYY-MM-DD">`。
 - **Products 页**（`products/index.html`）刻意保持简洁：每个产品一行（图标、名字、一句话、链接或状态），不放截图和参数。
+  - 页面底部有 **Archived** 一节（2026-11-06 加）：放已经做完、开源、不再加功能的项目，同样每个一行，不进首页的 “What we're building”。目前只有 **Loadline**（开源投资风险自查网页，`/loadline/` 是 `PixelBlue-LLC/loadline` 仓库的 GitHub Pages 项目页，自动挂在本域名下，不在这个仓库里）。图标 `assets/products/loadline/icon.svg`（圆圈 + 吃水线；横线不要伸出圆外，否则像伦敦地铁标志）。隐私和条款在 loadline 仓库的 `docs/`，`legal.html` 链过去。
 - **产品详情页**不要做成 App Store 那种样式（图标 + 参数栏 + 截图条）。详情页**统一用公司配色**（2026-10-19 用户决定，不用产品自己的配色）；`body.theme-prec` 只是把页面变量映射到公司颜色。文案用该产品品牌文档的语气，首屏是一个可以勾选和点“Ready for Next Time”的小清单演示（页面底部的内联脚本）。
 - **Prec 发新版本时**改 `products/prec.html` 两处：首屏下方的版本号，以及“Release notes”最上面加一条（版本号、月份、一句话概括、App Store 的 What's New 条目）。What's New 原文在 `../Prec/docs/RELEASE-x.x.md`。
 - **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。**2026-11-05 已发布**（`tandemdock-launch` 分支已合并进 `main`）：首屏 “Download for Mac”（`https://github.com/PixelBlue-LLC/TandemDock-releases/releases/latest/download/TandemDock.dmg`，永远是最新版）、版本号、Install 三步、Release notes。Pro 现在只能试用 14 天，**购买入口用 `PRO PURCHASE:` 注释先藏起来**，等 Lemon Squeezy 审核通过、换上正式付款链接再放出来。

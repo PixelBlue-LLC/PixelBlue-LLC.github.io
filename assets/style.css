@@ -172,6 +172,10 @@ article.post ul { padding-left: 22px; }
 .plist h2 a:hover { color: var(--blue); }
 .plist p { margin: 0; color: var(--ink-soft); }
 .plist .soon h2 { color: var(--ink-soft); }
+.archive { padding-top: 8px; }
+.archive-title { font-size: 15px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 6px; }
+.archive-note { margin: 0 0 18px; color: var(--ink-soft); max-width: 60ch; }
+.archive .plist { border-top-width: 1px; }
 .plinks { display: flex; gap: 20px; align-items: center; font-weight: 600; }
 @media (max-width: 640px) {
   .plist li { grid-template-columns: 48px 1fr; gap: 16px; }

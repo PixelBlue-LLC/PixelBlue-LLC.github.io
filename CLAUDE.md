@@ -67,6 +67,8 @@ Website/
   - Aheadly（iOS 日历/提醒小组件，App Store 名 "Aheadly: Calendar Widget"）：2026-10-25 已提交 App Store 审核，网站上还没出现。过审后做产品页 `products/aheadly.html`（同 Prec 的公司配色详情页），截图用 `assets/products/aheadly/screenshots/`，首页和 Products 页加一行 Available + App Store 链接。
 - TandemDock（原名 MultiDock）的上架计划见 `../TandemDock/docs/LAUNCH-PLAN.md`。名字中间考虑过 Everydock，因 GitHub 上已有同名开源 App 放弃，网站上从未出现过。
 - 网站文字用英文；`CLAUDE.md` 和 `docs/` 用中文。
+- **地点**（2026-11-05 用户要求）：只有 Contact 页写具体城市（Sacramento、San Marcos）；其他所有地方（页脚、首页、About、博客、隐私政策和条款的联系方式）只写 “California”。
+- **About 页的重点**是“我们做自己的软件”（产品、做法、What we’ve made），不讲接外包；接项目的内容只放 Services 页。Contact 页不放某个产品的支持说明。
 
 ## 4. 发布流程
 

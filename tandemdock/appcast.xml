@@ -11,6 +11,21 @@
     <language>en</language>
     <!-- items -->
     <item>
+      <title>Version 1.5.2</title>
+      <pubDate>Fri, 06 Nov 2026 00:43:16 +0000</pubDate>
+      <sparkle:version>18</sparkle:version>
+      <sparkle:shortVersionString>1.5.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+<ul>
+  <li>The Pro pane only lists features you can use today.</li>
+  <li>Every new install still includes a 14-day Pro trial. Pro purchases open soon.</li>
+  <li>Fixed the Dock sliding sideways and snapping back when the pointer rests next to a divider with magnification on.</li>
+</ul>
+      ]]></description>
+      <enclosure url="https://github.com/PixelBlue-LLC/TandemDock-releases/releases/download/v1.5.2/TandemDock.dmg" type="application/octet-stream" sparkle:edSignature="RgmzLzYZ5q5ByJvfLFE7WHPyfaAMTisbpRMqYPxnjyxs3Cz05M6nHbbPfjfGk8hcpbNYEb8i9DDynSz0ib/3DQ==" length="2205993"/>
+    </item>
+    <item>
       <title>Version 1.5.1</title>
       <pubDate>Fri, 23 Oct 2026 21:47:29 +0000</pubDate>
       <sparkle:version>17</sparkle:version>

@@ -1,7 +1,7 @@
 # Website — PixelBlue LLC 公司官网
 
 > 先读总文件夹的 `../CLAUDE.md`（工作规则），再读本文件。**进度和待办看 Google Sheets「PixelBlue 排期表」**（链接在 `../CLAUDE.md` 第 3 节）。
-> 最后更新：2026-10-26（待办改记在排期表；本机路径改为 `~/PixelBlue-LLC/Website`）
+> 最后更新：2026-11-12（Aheadly 改名 Uponvo：隐私政策页、legal、截图文件夹）
 
 ---
 
@@ -25,12 +25,13 @@ Website/
 ├── index.html  services.html  about.html  contact.html  404.html  legal.html（Privacy and Terms 总页，列出每个产品的隐私政策和条款）
 ├── products/             产品列表 index.html + 每个产品一个详情页（prec.html、tandemdock.html）
 │                         + TandemDock 的隐私政策 tandemdock-privacy.html 和授权条款 tandemdock-terms.html
-│                         + Aheadly（iOS 小组件 App，尚未上架、还没有产品页）的隐私政策 aheadly-privacy.html，
+│                         + Uponvo（iOS 小组件 App，原名 Aheadly，还没有产品页）的隐私政策 uponvo-privacy.html，
 │                           App 付费墙和 App Store Connect 的 Privacy Policy URL 都指向它；条款用 Apple 标准 EULA
+│                         + aheadly-privacy.html：只做跳转到 uponvo-privacy.html（1.0 版 App 里还链着旧地址，所有用户更新到 1.0.1 以后可以删）
 ├── blog/                 博客列表 index.html + 每篇一个 .html
 ├── assets/               style.css、logo.svg（像素 PB）、favicon.svg
 │   └── products/         每个产品的图标：prec/icon.svg、tandemdock/icon.svg
-│                         + aheadly/screenshots/：Aheadly 的 5 张商店截图和付费墙截图（2026-10-24，给 App Store Connect 上传用，以后产品页也可以用；原件在 Aheadly 仓库 store/）
+│                         + uponvo/screenshots/：Uponvo 的 5 张商店截图和付费墙截图（2026-11-12 改名后更新；原件在 Aheadly 仓库 store/）
 ├── tandemdock/appcast.xml  TandemDock 的 Sparkle 更新源（App 每天读一次）；条目由 TandemDock 仓库的 scripts/publish.sh 加，`<!-- items -->` 标记不能删
 ├── CNAME                 pixelbluellc.com —— 不要删，删了自定义域名会失效
 ├── _config.yml           把 README.md、CLAUDE.md、docs/ 排除在发布之外
@@ -65,7 +66,7 @@ Website/
   - Family Care Coordination：In research（还没代码）
   - TandemDock：**已发布（2026-11-05，1.5.2，免费下载 + 14 天 Pro 试用，Pro 购买等 Lemon Squeezy 审核通过再开）**。首页状态写 “Free for Mac”；Products 页不放状态标志（2026-11-05 用户要求删掉 Available，和 Prec 一样只留链接）
   - Housekeeping Route Scheduling：Planned
-  - Aheadly（iOS 日历/提醒小组件，App Store 名 "Aheadly: Calendar Widget"）：2026-10-25 已提交 App Store 审核，网站上还没出现。过审后做产品页 `products/aheadly.html`（同 Prec 的公司配色详情页），截图用 `assets/products/aheadly/screenshots/`，首页和 Products 页加一行 Available + App Store 链接。
+  - **Uponvo**（原名 Aheadly，iOS 日历/提醒小组件，App Store 名 "Uponvo: Calendar Widget"）：2026-11-12 因同名冲突（F4 Software 的 Aheadly）改名，网站上不能再用 Aheadly 这个名字。1.0 已上架；以后做产品页 `products/uponvo.html`（同 Prec 的公司配色详情页），截图用 `assets/products/uponvo/screenshots/`，首页和 Products 页加一行 + App Store 链接。
 - TandemDock（原名 MultiDock）的上架计划见 `../TandemDock/docs/LAUNCH-PLAN.md`。名字中间考虑过 Everydock，因 GitHub 上已有同名开源 App 放弃，网站上从未出现过。
 - 网站文字用英文；`CLAUDE.md` 和 `docs/` 用中文。
 - **地点**（2026-11-05 用户要求）：只有 Contact 页写具体城市（Sacramento、San Marcos）；其他所有地方（页脚、首页、About、博客、隐私政策和条款的联系方式）只写 “California”。

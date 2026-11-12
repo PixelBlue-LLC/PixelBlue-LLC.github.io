@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uponvo | PixelBlue LLC</title>
+<meta name="description" content="Uponvo shows your next calendar event and your next reminder on your iPhone Home Screen and Lock Screen. No account to create: it reads what is already on your iPhone and keeps it there.">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="theme-uponvo">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="44" height="28">PixelBlue LLC</a>
+    <nav class="nav" aria-label="Main"><a href="/">Home</a><a href="/products/" aria-current="page">Products</a><a href="/about.html">About</a><a href="/blog/">Blog</a><a href="/services.html">Services</a><a href="/contact.html">Contact</a></nav>
+  </div>
+</header>
+<main>
+<section class="prec-hero">
+  <div class="wrap">
+    <div class="prec-intro">
+      <p class="prec-brand"><img src="/assets/products/uponvo/icon.svg" alt="" width="36" height="36">Uponvo</p>
+      <h1>What’s next, at a glance.</h1>
+      <p class="lead">Uponvo puts your next event and your next reminder on your iPhone Home Screen and Lock Screen, with a countdown to when it starts. No account to create: it reads the calendars and reminders already on your iPhone.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://apps.apple.com/us/app/id6826461962">Get Uponvo on the App Store</a>
+      </div>
+      <p class="prec-meta">Free, with optional Pro · iPhone · iOS 17 or later · Version 1.0.1</p>
+    </div>
+    <div class="up-demo" aria-label="Try an Uponvo widget">
+      <div class="up-widget">
+        <p class="up-label">Up next</p>
+        <div class="up-items" aria-live="polite"></div>
+      </div>
+      <div class="up-controls" role="group" aria-label="Widget shows">
+        <button type="button" data-show="both" aria-pressed="true">Both</button>
+        <button type="button" data-show="event" aria-pressed="false">Events</button>
+        <button type="button" data-show="rem" aria-pressed="false">Reminders</button>
+      </div>
+      <p class="demo-note">Try it: choose what the widget shows.</p>
+    </div>
+  </div>
+</section>
+<section class="prec-sec">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <ol class="steps prec-steps">
+      <li><h3>Allow access once</h3><p>Uponvo reads the calendars and reminders on your iPhone, including iCloud, Google, Exchange and any account you’ve added in Settings. Nothing to sign in to, nothing to sync.</p></li>
+      <li><h3>Add a widget</h3><p>Small or medium on the Home Screen; rectangular, circular or a single line on the Lock Screen.</p></li>
+      <li><h3>Glance and go</h3><p>See what’s next and how long until it starts. Tap to open the details. Tapping never completes a reminder by accident.</p></li>
+    </ol>
+  </div>
+</section>
+<section class="prec-sec">
+  <div class="wrap split">
+    <h2>Free to use, Pro if you want more</h2>
+    <div>
+      <p class="lead">The small Home Screen widget, all three Lock Screen widgets and the list in the app are free.</p>
+      <p>Uponvo Pro adds:</p>
+      <ul class="up-pro">
+        <li>The medium Home Screen widget</li>
+        <li>Widgets for events only or reminders only, and overdue reminders that stay on the widget</li>
+        <li>Faster widget refresh: every 15, 20 or 30 minutes, during the hours you choose</li>
+        <li>Refresh right after you edit, with a Shortcuts automation</li>
+        <li>Pick which calendars and lists to show; group the list by day or week</li>
+        <li>Full event details, and jump straight to a reminder in Reminders</li>
+      </ul>
+      <p class="prec-fine">$1.99 a month, $12.99 a year, or $20.99 once. Prices are in US dollars and may differ in your country.</p>
+    </div>
+  </div>
+</section>
+<section class="prec-sec">
+  <div class="wrap split">
+    <h2>Your data stays on your iPhone</h2>
+    <div>
+      <p class="lead">No account, no analytics, no ads. PixelBlue doesn’t collect any data from Uponvo.</p>
+      <p>Your events and reminders are read on your device and never sent anywhere.</p>
+      <p><a href="/products/uponvo-privacy.html">Read the privacy policy</a></p>
+    </div>
+  </div>
+</section>
+<section class="prec-sec" id="release-notes">
+  <div class="wrap">
+    <h2>Release notes</h2>
+    <ol class="entries"><li><div class="entry-date"><span class="ver">1.0.1</span><span>Nov 2026</span></div><div><p class="entry-sum">A new name, and a few small improvements.</p><ul><li><strong>New name.</strong> The app is now called Uponvo. Your widgets, settings and Pro purchase stay the same.</li><li><strong>About.</strong> See your version, send feedback or take a two-minute survey from Settings.</li><li>Fewer back-to-back widget refreshes while you edit with the app open.</li></ul></div></li><li><div class="entry-date"><span class="ver">1.0</span><span>Nov 2026</span></div><div><p class="entry-sum">First release.</p><ul><li>Home Screen and Lock Screen widgets with your next event and reminder, a countdown, and Uponvo Pro.</li></ul></div></li></ol>
+  </div>
+</section>
+<section class="prec-sec">
+  <div class="wrap split">
+    <h2>Questions or ideas?</h2>
+    <div>
+      <p class="lead">Email us with your iPhone model and iOS version. We read every message.</p>
+      <div class="actions"><a class="btn btn-primary" href="mailto:info@pixelbluellc.com?subject=Uponvo%20feedback">Email info@pixelbluellc.com</a><a class="btn btn-ghost" href="https://apps.apple.com/us/app/id6826461962">App Store</a></div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var box=document.querySelector('.up-items'); if(!box) return;
+  var buttons=document.querySelectorAll('.up-controls button'), show='both';
+  function at(minutes){ var d=new Date(); d.setSeconds(0,0); d.setMinutes(Math.ceil((d.getMinutes()+minutes)/5)*5); return d; }
+  var items=[
+    {kind:'event', title:'Design review', start:at(25)},
+    {kind:'rem', title:'Pay the electric bill', start:at(70)},
+    {kind:'event', title:'Dinner with Sam', start:at(240)}
+  ];
+  function clock(d){ return d.toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}); }
+  function left(d){ var m=Math.max(0, Math.round((d-new Date())/60000)); if(m<60) return 'in '+m+' min'; var h=Math.floor(m/60), r=m%60; return 'in '+h+' hr'+(r? ' '+r+' min':''); }
+  function render(){
+    var list=items.filter(function(i){ return show==='both' || i.kind===show; }).slice(0,2);
+    box.innerHTML='';
+    list.forEach(function(i){
+      var row=document.createElement('div'); row.className='up-item'+(i.kind==='rem'?' rem':'');
+      row.innerHTML='<span class="up-bar" aria-hidden="true"></span><div><p class="up-title"></p><p class="up-when"><span class="up-count"></span> · <span class="up-at"></span></p></div>';
+      row.querySelector('.up-title').textContent=i.title;
+      row.querySelector('.up-count').textContent=left(i.start);
+      row.querySelector('.up-at').textContent=(i.kind==='rem'?'Due ':'')+clock(i.start);
+      box.appendChild(row);
+    });
+  }
+  buttons.forEach(function(b){ b.addEventListener('click', function(){
+    show=b.getAttribute('data-show');
+    buttons.forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+    render();
+  }); });
+  render(); setInterval(render, 30000);
+})();
+</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 PixelBlue LLC · California</p>
+    <nav aria-label="Footer">
+      <a href="mailto:info@pixelbluellc.com">info@pixelbluellc.com</a>
+      <a href="/legal.html">Privacy and Terms</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

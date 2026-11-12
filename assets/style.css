@@ -184,19 +184,19 @@ article.post ul { padding-left: 22px; }
 }
 
 /* Product detail pages: company palette, mapped to page-level names */
-.theme-prec, .theme-tandemdock {
+.theme-prec, .theme-tandemdock, .theme-uponvo {
   --p-canvas: var(--paper); --p-card: #FFFFFF; --p-ink: var(--ink); --p-soft: var(--ink-soft);
   --p-sand: var(--deep); --p-sand-tint: var(--pale); --p-rule: var(--line);
   background: var(--p-canvas);
 }
-.theme-prec main, .theme-tandemdock main { color: var(--p-ink); }
-.theme-prec main a, .theme-tandemdock main a { color: var(--p-sand); }
-.theme-prec main a:hover, .theme-tandemdock main a:hover { color: var(--p-ink); }
-.theme-prec main .lead, .theme-prec main p, .theme-tandemdock main .lead, .theme-tandemdock main p { color: var(--p-soft); }
-.theme-prec main h1, .theme-prec main h2, .theme-prec main h3, .theme-tandemdock main h1, .theme-tandemdock main h2, .theme-tandemdock main h3 { color: var(--p-ink); }
-.theme-prec :focus-visible, .theme-tandemdock :focus-visible { outline-color: var(--p-sand); }
-.theme-prec main .btn-primary, .theme-tandemdock main .btn-primary { color: #fff; }
-.theme-prec main .btn-ghost, .theme-tandemdock main .btn-ghost { color: var(--deep); }
+.theme-prec main, .theme-tandemdock main, .theme-uponvo main { color: var(--p-ink); }
+.theme-prec main a, .theme-tandemdock main a, .theme-uponvo main a { color: var(--p-sand); }
+.theme-prec main a:hover, .theme-tandemdock main a:hover, .theme-uponvo main a:hover { color: var(--p-ink); }
+.theme-prec main .lead, .theme-prec main p, .theme-tandemdock main .lead, .theme-tandemdock main p, .theme-uponvo main .lead, .theme-uponvo main p { color: var(--p-soft); }
+.theme-prec main h1, .theme-prec main h2, .theme-prec main h3, .theme-tandemdock main h1, .theme-tandemdock main h2, .theme-tandemdock main h3, .theme-uponvo main h1, .theme-uponvo main h2, .theme-uponvo main h3 { color: var(--p-ink); }
+.theme-prec :focus-visible, .theme-tandemdock :focus-visible, .theme-uponvo :focus-visible { outline-color: var(--p-sand); }
+.theme-prec main .btn-primary, .theme-tandemdock main .btn-primary, .theme-uponvo main .btn-primary { color: #fff; }
+.theme-prec main .btn-ghost, .theme-tandemdock main .btn-ghost, .theme-uponvo main .btn-ghost { color: var(--deep); }
 
 .prec-hero { padding: 72px 0 88px; }
 .prec-hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
@@ -282,3 +282,25 @@ article.post ul { padding-left: 22px; }
 .ed-controls button[aria-pressed="true"] { background: var(--deep); color: #fff; }
 .ed-demo .demo-note { margin-left: auto !important; margin-right: auto !important; }
 @media (prefers-reduced-motion: reduce) { .ed-icon, .ed-window { transition: none; } }
+
+/* Uponvo: Home Screen widget demo */
+.up-demo { max-width: 380px; margin-left: auto; }
+@media (max-width: 860px) { .up-demo { margin: 0 auto; } }
+.up-widget { background: var(--p-card); border: 1px solid var(--p-rule); border-radius: 28px; padding: 22px 22px 18px; transform: rotate(-1.5deg); box-shadow: 0 18px 40px rgba(20,33,61,.08); }
+@media (max-width: 860px) { .up-widget { transform: none; } }
+.up-label { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--p-soft); margin: 0 0 12px !important; }
+.up-item { display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid var(--p-rule); }
+.up-item:first-of-type { border-top: 0; padding-top: 0; }
+.up-bar { width: 5px; border-radius: 3px; flex: none; background: var(--blue); }
+.up-item.rem .up-bar { background: #FF9F0A; }
+.up-title { font-weight: 700; font-size: 18px; color: var(--p-ink); margin: 0 !important; }
+.up-when { font-size: 15px; margin: 2px 0 0 !important; }
+.up-count { font-weight: 700; color: var(--deep) !important; }
+.up-empty { font-size: 15px; padding: 12px 0; margin: 0 !important; }
+.up-controls { display: flex; justify-content: center; margin-top: 20px; border: 1.5px solid var(--deep); border-radius: 999px; overflow: hidden; width: max-content; margin-left: auto; margin-right: auto; }
+.up-controls button { font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border: 0; background: transparent; color: var(--deep); cursor: pointer; }
+.up-controls button + button { border-left: 1.5px solid var(--deep); }
+.up-controls button[aria-pressed="true"] { background: var(--deep); color: #fff; }
+.up-demo .demo-note { margin-left: auto !important; margin-right: auto !important; }
+.up-pro { list-style: none; padding: 0; margin: 0 0 16px; }
+.up-pro li { padding: 10px 0; border-bottom: 1px solid var(--p-rule); color: var(--p-soft); }

@@ -1,7 +1,7 @@
 # Website — PixelBlue LLC 公司官网
 
 > 先读总文件夹的 `../CLAUDE.md`（工作规则），再读本文件。**进度和待办看 Google Sheets「PixelBlue 排期表」**（链接在 `../CLAUDE.md` 第 3 节）。
-> 最后更新：2026-11-12（Aheadly 改名 Uponvo：隐私政策页、legal、截图文件夹）
+> 最后更新：2026-11-12（Aheadly 改名 Uponvo：隐私政策页、legal、截图文件夹；Uponvo 产品页在 uponvo-page 分支）
 
 ---
 
@@ -25,7 +25,7 @@ Website/
 ├── index.html  services.html  about.html  contact.html  404.html  legal.html（Privacy and Terms 总页，列出每个产品的隐私政策和条款）
 ├── products/             产品列表 index.html + 每个产品一个详情页（prec.html、tandemdock.html）
 │                         + TandemDock 的隐私政策 tandemdock-privacy.html 和授权条款 tandemdock-terms.html
-│                         + Uponvo（iOS 小组件 App，原名 Aheadly，还没有产品页）的隐私政策 uponvo-privacy.html，
+│                         + Uponvo（iOS 小组件 App，原名 Aheadly）的详情页 uponvo.html 和隐私政策 uponvo-privacy.html，
 │                           App 付费墙和 App Store Connect 的 Privacy Policy URL 都指向它；条款用 Apple 标准 EULA
 │                         + aheadly-privacy.html：只做跳转到 uponvo-privacy.html（1.0 版 App 里还链着旧地址，所有用户更新到 1.0.1 以后可以删）
 ├── blog/                 博客列表 index.html + 每篇一个 .html
@@ -66,7 +66,8 @@ Website/
   - Family Care Coordination：In research（还没代码）
   - TandemDock：**已发布（2026-11-05，1.5.2，免费下载 + 14 天 Pro 试用，Pro 购买等 Lemon Squeezy 审核通过再开）**。首页状态写 “Free for Mac”；Products 页不放状态标志（2026-11-05 用户要求删掉 Available，和 Prec 一样只留链接）
   - Housekeeping Route Scheduling：Planned
-  - **Uponvo**（原名 Aheadly，iOS 日历/提醒小组件，App Store 名 "Uponvo: Calendar Widget"）：2026-11-12 因同名冲突（F4 Software 的 Aheadly）改名，网站上不能再用 Aheadly 这个名字。1.0 已上架；以后做产品页 `products/uponvo.html`（同 Prec 的公司配色详情页），截图用 `assets/products/uponvo/screenshots/`，首页和 Products 页加一行 + App Store 链接。
+  - **Uponvo**（原名 Aheadly，iOS 日历/提醒小组件，App Store 名 "Uponvo: Calendar Widget"）：2026-11-12 因同名冲突（F4 Software 的 Aheadly）改名，网站上不能再用 Aheadly 这个名字。首页状态写 “On the App Store”，Products 页一行（和 Prec 一样只留链接），App Store 链接 `https://apps.apple.com/us/app/id6826461962`。
+  - **产品页** `products/uponvo.html`（`body.theme-uponvo`，公司配色，2026-11-12 做好）：首屏右边是可切换 Both / Events / Reminders 的主屏小组件演示（倒计时按当前时间算，样式在 `style.css` 末尾 `.up-*`），下面是 How it works、Free / Pro（价格 $1.99 月 / $12.99 年 / $20.99 终身）、隐私、Release notes、联系。图标 `assets/products/uponvo/icon.svg`（和 App 图标 A2 同一构图）。**先放在 `uponvo-page` 分支，1.0.1 过审、商店名变成 Uponvo 后再合并进 `main`**。以后每发一个版本：首屏版本号 + Release notes 最上面加一条。
 - TandemDock（原名 MultiDock）的上架计划见 `../TandemDock/docs/LAUNCH-PLAN.md`。名字中间考虑过 Everydock，因 GitHub 上已有同名开源 App 放弃，网站上从未出现过。
 - 网站文字用英文；`CLAUDE.md` 和 `docs/` 用中文。
 - **地点**（2026-11-05 用户要求）：只有 Contact 页写具体城市（Sacramento、San Marcos）；其他所有地方（页脚、首页、About、博客、隐私政策和条款的联系方式）只写 “California”。

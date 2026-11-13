@@ -64,7 +64,7 @@ Website/
 - 产品状态（首页“What we're building”和 Products 页的“In the works”）要和实际一致：
   - Prec：On the App Store，链接 https://apps.apple.com/us/app/prec/id6771575207
   - Family Care Coordination：In research（还没代码）
-  - TandemDock：**已发布（2026-11-05，1.5.2，免费下载 + 14 天 Pro 试用，Pro 购买等 Lemon Squeezy 审核通过再开）**。首页状态写 “Free for Mac”；Products 页不放状态标志（2026-11-05 用户要求删掉 Available，和 Prec 一样只留链接）
+  - TandemDock：**已发布（2026-11-05，1.5.2，免费下载 + 14 天 Pro 试用，Pro 购买等 Polar 店铺建好再开；2026-11-13 起收款平台从 Lemon Squeezy 换成 Polar，隐私政策和条款已改）**。首页状态写 “Free for Mac”；Products 页不放状态标志（2026-11-05 用户要求删掉 Available，和 Prec 一样只留链接）
   - Housekeeping Route Scheduling：Planned
   - **Uponvo**（原名 Aheadly，iOS 日历/提醒小组件，App Store 名 "Uponvo: Calendar Widget"）：2026-11-12 因同名冲突（F4 Software 的 Aheadly）改名，网站上不能再用 Aheadly 这个名字。1.0 已上架；以后做产品页 `products/uponvo.html`（同 Prec 的公司配色详情页），截图用 `assets/products/uponvo/screenshots/`，首页和 Products 页加一行 + App Store 链接。
 - TandemDock（原名 MultiDock）的上架计划见 `../TandemDock/docs/LAUNCH-PLAN.md`。名字中间考虑过 Everydock，因 GitHub 上已有同名开源 App 放弃，网站上从未出现过。
@@ -85,7 +85,7 @@ Website/
 
 - **仓库是公开的**：不要放密码、token、个人住址/个人电话/个人邮箱、财务信息。联系方式只用公司邮箱 info@pixelbluellc.com 和网站上已公开的公司电话。
 - GitHub Pages 不能跑后端，联系方式只能用 `mailto:` 链接。将来要表单需接第三方服务（如 Formspree）。
-- GitHub Pages 不允许用作电商/SaaS 主站；展示公司、产品介绍、隐私政策、支持页面没问题。卖 TandemDock Pro 的付款走 Lemon Squeezy 托管页面。
+- GitHub Pages 不允许用作电商/SaaS 主站；展示公司、产品介绍、隐私政策、支持页面没问题。卖 TandemDock Pro 的付款走 Polar 托管的结账页（2026-11-13 从 Lemon Squeezy 换成 Polar，Lemon 开店审核一直没结果）。
 - Cloudflare 里 GitHub Pages 的 5 条记录必须是 **DNS only（灰色云）**，否则 HTTPS 证书续期会失败。
 
 ## 6. 待办

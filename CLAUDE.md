@@ -1,7 +1,7 @@
 # Website — PixelBlue LLC 公司官网
 
 > 先读总文件夹的 `../CLAUDE.md`（工作规则），再读本文件。**进度和待办看 Google Sheets「PixelBlue 排期表」**（链接在 `../CLAUDE.md` 第 3 节）。
-> 最后更新：2026-11-12（Aheadly 改名 Uponvo：隐私政策页、legal、截图文件夹）
+> 最后更新：2026-11-16（TandemDock 下载感谢页；准备接 Cloudflare Web Analytics）
 
 ---
 
@@ -56,6 +56,7 @@ Website/
 - **产品详情页**不要做成 App Store 那种样式（图标 + 参数栏 + 截图条）。详情页**统一用公司配色**（2026-10-19 用户决定，不用产品自己的配色）；`body.theme-prec` 只是把页面变量映射到公司颜色。文案用该产品品牌文档的语气，首屏是一个可以勾选和点“Ready for Next Time”的小清单演示（页面底部的内联脚本）。
 - **Prec 发新版本时**改 `products/prec.html` 两处：首屏下方的版本号，以及“Release notes”最上面加一条（版本号、月份、一句话概括、App Store 的 What's New 条目）。What's New 原文在 `../Prec/docs/RELEASE-x.x.md`。
 - **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。**2026-11-05 已发布**（`tandemdock-launch` 分支已合并进 `main`）：首屏 “Download for Mac”（`https://github.com/PixelBlue-LLC/TandemDock-releases/releases/latest/download/TandemDock.dmg`，永远是最新版）、版本号、Install 三步、Release notes。Pro 现在只能试用 14 天，**购买入口用 `PRO PURCHASE:` 注释先藏起来**，等 Lemon Squeezy 审核通过、换上正式付款链接再放出来。
+  - **下载感谢页**（2026-11-16，`products/tandemdock-download.html`，noindex）：所有 “Download” 按钮（首页、Products 页、TandemDock 页、发布博客）都先进这页，页面 0.8 秒后自动跳到最新版 dmg 开始下载，并写三步安装（含辅助功能权限怎么开）和问卷链接（Google 表单「TandemDock feedback」，留邮箱送 Pro 授权）。以后 dmg 地址变了要改这页的 `#dl-link`。
   - 以后每发一个 TandemDock 版本：首屏下方的版本号和 Release notes 最上面加一条（内容同 TandemDock 仓库 `docs/releases/<版本>.html`）；`tandemdock/appcast.xml` 由 `publish.sh` 改，不要手改。
   - **隐私政策和条款**（2026-10-23）：`products/tandemdock-privacy.html`、`products/tandemdock-terms.html`，TandemDock 页正文 “Stays on your Mac” 和 `legal.html` 链到这里，App 的 About 页也链到这里。条款里的数字是用户定的：一人最多 3 台 Mac、14 天无理由退款、加州法律。App 联网行为变了（如接入 Sparkle）要一起改隐私政策。
   - 价格：Pro 原价 $9.99，开放购买后首发价 $4.99 到 2026-12-31（用户 2026-11-05 定）。**现在页面不写价格**，只写 “Pro purchases open soon”；开放购买时把页面里 `PRO PURCHASE:` 注释的三处加回来（Buy 按钮、Pro 节的购买按钮、Install 下面的授权码说明），并写上价格。
@@ -87,6 +88,7 @@ Website/
 - GitHub Pages 不能跑后端，联系方式只能用 `mailto:` 链接。将来要表单需接第三方服务（如 Formspree）。
 - GitHub Pages 不允许用作电商/SaaS 主站；展示公司、产品介绍、隐私政策、支持页面没问题。卖 TandemDock Pro 的付款走 Polar 托管的结账页（2026-11-13 从 Lemon Squeezy 换成 Polar，Lemon 开店审核一直没结果）。
 - Cloudflare 里 GitHub Pages 的 5 条记录必须是 **DNS only（灰色云）**，否则 HTTPS 证书续期会失败。
+- **Cloudflare Web Analytics**（2026-11-16 准备接入）：DNS 是灰色云，Cloudflare 不会自动注入，要在每个页面 `</body>` 前手动放统计代码（token 是公开的，可以放进仓库）。legal 页和 TandemDock、Uponvo 隐私政策的「Our website」已写明用 Cloudflare Web Analytics（不设 cookie、只记汇总数据）。**这些文字和统计代码要一起上线**。
 
 ## 6. 待办
 

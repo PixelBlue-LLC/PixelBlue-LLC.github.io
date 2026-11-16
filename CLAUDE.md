@@ -1,7 +1,7 @@
 # Website — PixelBlue LLC 公司官网
 
 > 先读总文件夹的 `../CLAUDE.md`（工作规则），再读本文件。**进度和待办看 Google Sheets「PixelBlue 排期表」**（链接在 `../CLAUDE.md` 第 3 节）。
-> 最后更新：2026-11-16（TandemDock 下载感谢页；准备接 Cloudflare Web Analytics）
+> 最后更新：2026-11-16（TandemDock 下载感谢页；接入 Cloudflare Web Analytics）
 
 ---
 
@@ -88,7 +88,7 @@ Website/
 - GitHub Pages 不能跑后端，联系方式只能用 `mailto:` 链接。将来要表单需接第三方服务（如 Formspree）。
 - GitHub Pages 不允许用作电商/SaaS 主站；展示公司、产品介绍、隐私政策、支持页面没问题。卖 TandemDock Pro 的付款走 Polar 托管的结账页（2026-11-13 从 Lemon Squeezy 换成 Polar，Lemon 开店审核一直没结果）。
 - Cloudflare 里 GitHub Pages 的 5 条记录必须是 **DNS only（灰色云）**，否则 HTTPS 证书续期会失败。
-- **Cloudflare Web Analytics**（2026-11-16 准备接入）：DNS 是灰色云，Cloudflare 不会自动注入，要在每个页面 `</body>` 前手动放统计代码（token 是公开的，可以放进仓库）。legal 页和 TandemDock、Uponvo 隐私政策的「Our website」已写明用 Cloudflare Web Analytics（不设 cookie、只记汇总数据）。**这些文字和统计代码要一起上线**。
+- **Cloudflare Web Analytics**（2026-11-16 接入，token cafe3ebed31d4c3cb8e5ef5532d6a553，设置是 “Enable with JS Snippet installation”）：DNS 是灰色云，Cloudflare 不会自动注入，要在每个页面 `</body>` 前手动放统计代码（token 是公开的，可以放进仓库）。legal 页和 TandemDock、Uponvo 隐私政策的「Our website」已写明用 Cloudflare Web Analytics（不设 cookie、只记汇总数据）。**这些文字和统计代码要一起上线**。
 
 ## 6. 待办
 

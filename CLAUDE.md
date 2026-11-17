@@ -52,7 +52,8 @@ Website/
 - **博客**：现有三篇——Hello from PixelBlue（2026-10-12，末尾加了 11 月 TandemDock 上线的更新说明）、Why we’re building Prec（10-19）、TandemDock is here（11-05，发布公告；11-17 开放 Pro 购买后在原句下面加了一段 “Update, November 17”）。
 - **加博客文章**：复制一篇 `blog/*.html` 改内容，再在 `blog/index.html` 的列表最上面加一条。日期写 `<time datetime="YYYY-MM-DD">`。
 - **Products 页**（`products/index.html`）刻意保持简洁：每个产品一行（图标、名字、一句话、链接或状态），不放截图和参数。
-  - 页面底部有 **Archived** 一节（2026-11-06 加）：放已经做完、开源、不再加功能的项目，同样每个一行，不进首页的 “What we're building”。目前只有 **Loadline**（开源投资风险自查网页，`/loadline/` 是 `PixelBlue-LLC/loadline` 仓库的 GitHub Pages 项目页，自动挂在本域名下，不在这个仓库里）。图标 `assets/products/loadline/icon.svg`（圆圈 + 吃水线；横线不要伸出圆外，否则像伦敦地铁标志）。隐私和条款在 loadline 仓库的 `docs/`，`legal.html` 链过去。
+  - **Portus**（2026-11-17 由 Loadline 改名；拉丁语「港口」）：开源的多券商账户持仓看板，在浏览器里跑，数据不离开用户设备。`/portus/` 是 `PixelBlue-LLC/portus` 仓库的 GitHub Pages 项目页，自动挂在本域名下，不在这个仓库里。改名当天从页面底部的 Archived 一节挪回产品列表（Archived 一节已删，`style.css` 里的 `.archive` 样式留着备用），首页 “What we're building” 也加了一行，状态写 “Open source”。图标 `assets/products/portus/icon.svg`（图拉真港的六边形港池，左下角留一个口当港口入口）。隐私和条款在 portus 仓库的 `docs/`，`legal.html` 链过去。
+  - `loadline/index.html` 是旧网址 `/loadline/` 的跳转页（带上 `#/...` 路由跳到 `/portus/`），给改名前收藏的链接用，不要删。
 - **产品详情页**不要做成 App Store 那种样式（图标 + 参数栏 + 截图条）。详情页**统一用公司配色**（2026-10-19 用户决定，不用产品自己的配色）；`body.theme-prec` 只是把页面变量映射到公司颜色。文案用该产品品牌文档的语气，首屏是一个可以勾选和点“Ready for Next Time”的小清单演示（页面底部的内联脚本）。
 - **Prec 发新版本时**改 `products/prec.html` 两处：首屏下方的版本号，以及“Release notes”最上面加一条（版本号、月份、一句话概括、App Store 的 What's New 条目）。What's New 原文在 `../Prec/docs/RELEASE-x.x.md`。
 - **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。**2026-11-05 已发布**（`tandemdock-launch` 分支已合并进 `main`）：首屏 “Download for Mac”（`https://github.com/PixelBlue-LLC/TandemDock-releases/releases/latest/download/TandemDock.dmg`，永远是最新版）、版本号、Install 三步、Release notes。**2026-11-17 起（1.5.3）开放 Pro 购买**：首屏 “Buy Pro · $4.99”（次要按钮）、Pro 节的购买按钮、Install 下面的授权码说明（在收据邮件点 Access purchase 复制授权码；找回链接 `https://polar.sh/pixelblue/portal`）。两个按钮都链到 Polar 结账链接 `https://buy.polar.sh/polar_cl_A9i0Djy2ftbDeS2ZlsxPb9a4a7rHm62hSiYaR0V6K7d`（自动带首发价折扣）。
@@ -67,6 +68,7 @@ Website/
   - Family Care Coordination：In research（还没代码）
   - TandemDock：**已发布（2026-11-05 首发 1.5.2，免费下载 + 14 天 Pro 试用；2026-11-17 发 1.5.3 开放 Pro 购买，收款用 Polar，2026-11-13 从 Lemon Squeezy 换过来，隐私政策和条款已改）**。首页状态写 “Free for Mac”；Products 页不放状态标志（2026-11-05 用户要求删掉 Available，和 Prec 一样只留链接）
   - Housekeeping Route Scheduling：Planned
+  - Portus：开源网页，首页状态写 “Open source”；Products 页不放状态标志，只留 Open Portus 和 GitHub 链接
   - **Uponvo**（原名 Aheadly，iOS 日历/提醒小组件，App Store 名 "Uponvo: Calendar Widget"）：2026-11-12 因同名冲突（F4 Software 的 Aheadly）改名，网站上不能再用 Aheadly 这个名字。首页状态写 “On the App Store”，Products 页一行（和 Prec 一样只留链接），App Store 链接 `https://apps.apple.com/us/app/id6826461962`。
   - **产品页** `products/uponvo.html`（`body.theme-uponvo`，公司配色，2026-11-12 做好）：首屏右边是可切换 Both / Events / Reminders 的主屏小组件演示（倒计时按当前时间算，样式在 `style.css` 末尾 `.up-*`），下面是 How it works、Free / Pro（价格 $1.99 月 / $12.99 年 / $20.99 终身）、隐私、Release notes、联系。图标 `assets/products/uponvo/icon.svg`（和 App 图标 A2 同一构图）。2026-11-17 上线（1.0.2 过审、给 F4 Software 的确认邮件发出后从 `uponvo-page` 分支合并）。以后每发一个版本：首屏版本号 + Release notes 最上面加一条。
 - TandemDock（原名 MultiDock）的上架计划见 `../TandemDock/docs/LAUNCH-PLAN.md`。名字中间考虑过 Everydock，因 GitHub 上已有同名开源 App 放弃，网站上从未出现过。

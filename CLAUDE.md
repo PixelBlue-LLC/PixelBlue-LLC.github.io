@@ -1,7 +1,7 @@
 # Website — PixelBlue LLC 公司官网
 
 > 先读总文件夹的 `../CLAUDE.md`（工作规则），再读本文件。**进度和待办看 Google Sheets「PixelBlue 排期表」**（链接在 `../CLAUDE.md` 第 3 节）。
-> 最后更新：2026-11-16（TandemDock 下载感谢页；接入 Cloudflare Web Analytics）
+> 最后更新：2026-11-17（TandemDock 1.5.3 开放 Pro 购买：官网放出购买按钮和价格）
 
 ---
 
@@ -49,23 +49,23 @@ Website/
   - `--ink #14213D`（正文）、`--deep #16388A`（主色/按钮）、`--blue #2F64D6`（强调）、`--pale #DCE8FA`（浅底）、`--line #D8E1EE`（分隔线）
   - 字体：Schibsted Grotesk（Google Fonts）
 - 首页右侧的像素 PB 是内联 SVG，`rect.on` 是字母像素（加载时有一次动画，尊重“减少动态效果”设置）。
-- **博客**：现有三篇——Hello from PixelBlue（2026-10-12，末尾加了 11 月 TandemDock 上线的更新说明）、Why we’re building Prec（10-19）、TandemDock is here（11-05，发布公告；开放 Pro 购买后把 “Pro purchases open soon” 那句改掉）。
+- **博客**：现有三篇——Hello from PixelBlue（2026-10-12，末尾加了 11 月 TandemDock 上线的更新说明）、Why we’re building Prec（10-19）、TandemDock is here（11-05，发布公告；11-17 开放 Pro 购买后在原句下面加了一段 “Update, November 17”）。
 - **加博客文章**：复制一篇 `blog/*.html` 改内容，再在 `blog/index.html` 的列表最上面加一条。日期写 `<time datetime="YYYY-MM-DD">`。
 - **Products 页**（`products/index.html`）刻意保持简洁：每个产品一行（图标、名字、一句话、链接或状态），不放截图和参数。
   - 页面底部有 **Archived** 一节（2026-11-06 加）：放已经做完、开源、不再加功能的项目，同样每个一行，不进首页的 “What we're building”。目前只有 **Loadline**（开源投资风险自查网页，`/loadline/` 是 `PixelBlue-LLC/loadline` 仓库的 GitHub Pages 项目页，自动挂在本域名下，不在这个仓库里）。图标 `assets/products/loadline/icon.svg`（圆圈 + 吃水线；横线不要伸出圆外，否则像伦敦地铁标志）。隐私和条款在 loadline 仓库的 `docs/`，`legal.html` 链过去。
 - **产品详情页**不要做成 App Store 那种样式（图标 + 参数栏 + 截图条）。详情页**统一用公司配色**（2026-10-19 用户决定，不用产品自己的配色）；`body.theme-prec` 只是把页面变量映射到公司颜色。文案用该产品品牌文档的语气，首屏是一个可以勾选和点“Ready for Next Time”的小清单演示（页面底部的内联脚本）。
 - **Prec 发新版本时**改 `products/prec.html` 两处：首屏下方的版本号，以及“Release notes”最上面加一条（版本号、月份、一句话概括、App Store 的 What's New 条目）。What's New 原文在 `../Prec/docs/RELEASE-x.x.md`。
-- **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。**2026-11-05 已发布**（`tandemdock-launch` 分支已合并进 `main`）：首屏 “Download for Mac”（`https://github.com/PixelBlue-LLC/TandemDock-releases/releases/latest/download/TandemDock.dmg`，永远是最新版）、版本号、Install 三步、Release notes。Pro 现在只能试用 14 天，**购买入口用 `PRO PURCHASE:` 注释先藏起来**，等 Lemon Squeezy 审核通过、换上正式付款链接再放出来。
+- **TandemDock 页**（`products/tandemdock.html`，`body.theme-tandemdock`，和 Prec 共用公司配色的详情页样式）：首屏右边是可互动的 Dock 演示（鼠标划过放大、切换底/左/右），脚本在页面底部，样式在 `style.css` 末尾 `.ed-*`。**2026-11-05 已发布**（`tandemdock-launch` 分支已合并进 `main`）：首屏 “Download for Mac”（`https://github.com/PixelBlue-LLC/TandemDock-releases/releases/latest/download/TandemDock.dmg`，永远是最新版）、版本号、Install 三步、Release notes。**2026-11-17 起（1.5.3）开放 Pro 购买**：首屏 “Buy Pro · $4.99”（次要按钮）、Pro 节的购买按钮、Install 下面的授权码说明（在收据邮件点 Access purchase 复制授权码；找回链接 `https://polar.sh/pixelblue/portal`）。两个按钮都链到 Polar 结账链接 `https://buy.polar.sh/polar_cl_A9i0Djy2ftbDeS2ZlsxPb9a4a7rHm62hSiYaR0V6K7d`（自动带首发价折扣）。
   - **下载感谢页**（2026-11-16，`products/tandemdock-download.html`，noindex）：所有 “Download” 按钮（首页、Products 页、TandemDock 页、发布博客）都先进这页，页面 0.8 秒后自动跳到最新版 dmg 开始下载，并写三步安装（含辅助功能权限怎么开）和问卷链接（Google 表单「TandemDock feedback」，留邮箱送 Pro 授权）。以后 dmg 地址变了要改这页的 `#dl-link`。
   - 以后每发一个 TandemDock 版本：首屏下方的版本号和 Release notes 最上面加一条（内容同 TandemDock 仓库 `docs/releases/<版本>.html`）；`tandemdock/appcast.xml` 由 `publish.sh` 改，不要手改。
   - **隐私政策和条款**（2026-10-23）：`products/tandemdock-privacy.html`、`products/tandemdock-terms.html`，TandemDock 页正文 “Stays on your Mac” 和 `legal.html` 链到这里，App 的 About 页也链到这里。条款里的数字是用户定的：一人最多 3 台 Mac、14 天无理由退款、加州法律。App 联网行为变了（如接入 Sparkle）要一起改隐私政策。
-  - 价格：Pro 原价 $9.99，开放购买后首发价 $4.99 到 2026-12-31（用户 2026-11-05 定）。**现在页面不写价格**，只写 “Pro purchases open soon”；开放购买时把页面里 `PRO PURCHASE:` 注释的三处加回来（Buy 按钮、Pro 节的购买按钮、Install 下面的授权码说明），并写上价格。
+  - 价格：Pro 原价 $9.99，首发价 $4.99 到 2026-12-31（用户 2026-11-05 定，Polar 的 “Launch price” 折扣同一天结束）。**2027-01-01 要改页面**：两个 “Buy Pro” 按钮改成 $9.99，删掉 Pro 节里 “Launch price … (regularly $9.99)” 那句（页面里有 `LAUNCH PRICE:` 注释），博客 Update 段落里的价格也改掉。
   - 图标 `assets/products/tandemdock/icon.svg` 和 App 图标是同一张图（2026-10-22 定稿方案 F4，原稿在 TandemDock 仓库 `Support/AppIcon.svg`）。App 图标改了，这里要一起换。
 - **加新产品**：`products/` 下新建详情页（参考 `prec.html` 的结构，同样用公司配色），在 `products/index.html` 加一行，首页“What we're building”也加一行。
 - 产品状态（首页“What we're building”和 Products 页的“In the works”）要和实际一致：
   - Prec：On the App Store，链接 https://apps.apple.com/us/app/prec/id6771575207
   - Family Care Coordination：In research（还没代码）
-  - TandemDock：**已发布（2026-11-05，1.5.2，免费下载 + 14 天 Pro 试用，Pro 购买等 Polar 店铺建好再开；2026-11-13 起收款平台从 Lemon Squeezy 换成 Polar，隐私政策和条款已改）**。首页状态写 “Free for Mac”；Products 页不放状态标志（2026-11-05 用户要求删掉 Available，和 Prec 一样只留链接）
+  - TandemDock：**已发布（2026-11-05 首发 1.5.2，免费下载 + 14 天 Pro 试用；2026-11-17 发 1.5.3 开放 Pro 购买，收款用 Polar，2026-11-13 从 Lemon Squeezy 换过来，隐私政策和条款已改）**。首页状态写 “Free for Mac”；Products 页不放状态标志（2026-11-05 用户要求删掉 Available，和 Prec 一样只留链接）
   - Housekeeping Route Scheduling：Planned
   - **Uponvo**（原名 Aheadly，iOS 日历/提醒小组件，App Store 名 "Uponvo: Calendar Widget"）：2026-11-12 因同名冲突（F4 Software 的 Aheadly）改名，网站上不能再用 Aheadly 这个名字。1.0 已上架；以后做产品页 `products/uponvo.html`（同 Prec 的公司配色详情页），截图用 `assets/products/uponvo/screenshots/`，首页和 Products 页加一行 + App Store 链接。
 - TandemDock（原名 MultiDock）的上架计划见 `../TandemDock/docs/LAUNCH-PLAN.md`。名字中间考虑过 Everydock，因 GitHub 上已有同名开源 App 放弃，网站上从未出现过。

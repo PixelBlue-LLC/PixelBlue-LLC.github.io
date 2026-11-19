@@ -1,7 +1,7 @@
 # Website — PixelBlue LLC 公司官网
 
 > 先读总文件夹的 `../CLAUDE.md`（工作规则），再读本文件。**进度和待办看 Google Sheets「PixelBlue 排期表」**（链接在 `../CLAUDE.md` 第 3 节）。
-> 最后更新：2026-11-17（Uponvo 产品页上线；TandemDock 1.5.3 开放 Pro 购买：官网放出购买按钮和价格）
+> 最后更新：2026-11-18（Portus 阶段二上线，首页和 Products 页的介绍更新；Uponvo 产品页上线；TandemDock 1.5.3 开放 Pro 购买：官网放出购买按钮和价格）
 
 ---
 
@@ -53,6 +53,7 @@ Website/
 - **加博客文章**：复制一篇 `blog/*.html` 改内容，再在 `blog/index.html` 的列表最上面加一条。日期写 `<time datetime="YYYY-MM-DD">`。
 - **Products 页**（`products/index.html`）刻意保持简洁：每个产品一行（图标、名字、一句话、链接或状态），不放截图和参数。
   - **Portus**（2026-11-17 由 Loadline 改名；拉丁语「港口」）：开源的多券商账户持仓看板，在浏览器里跑，数据不离开用户设备。`/portus/` 是 `PixelBlue-LLC/portus` 仓库的 GitHub Pages 项目页，自动挂在本域名下，不在这个仓库里。改名当天从页面底部的 Archived 一节挪回产品列表（Archived 一节已删，`style.css` 里的 `.archive` 样式留着备用），首页 “What we're building” 也加了一行，状态写 “Open source”。图标 `assets/products/portus/icon.svg`（图拉真港的六边形港池，左下角留一个口当港口入口）。隐私和条款在 portus 仓库的 `docs/`，`legal.html` 链过去。
+  - 2026-11-18 Portus 阶段二上线（中英双语、粘贴券商持仓导入含债券、盘中自动刷新、ETF 穿透、相关性热力图、事件日历、观望列表）：首页那一行的介绍和 Products 页的一句话按新功能改了（写「in English or Chinese」），legal.html 的 Portus 隐私说明补了观望列表和「请求直接发给用户选的服务商」。Portus 的隐私说明本身在 portus 仓库 `docs/PRIVACY.md`。
   - `loadline/index.html` 是旧网址 `/loadline/` 的跳转页（带上 `#/...` 路由跳到 `/portus/`），给改名前收藏的链接用，不要删。
 - **产品详情页**不要做成 App Store 那种样式（图标 + 参数栏 + 截图条）。详情页**统一用公司配色**（2026-10-19 用户决定，不用产品自己的配色）；`body.theme-prec` 只是把页面变量映射到公司颜色。文案用该产品品牌文档的语气，首屏是一个可以勾选和点“Ready for Next Time”的小清单演示（页面底部的内联脚本）。
 - **Prec 发新版本时**改 `products/prec.html` 两处：首屏下方的版本号，以及“Release notes”最上面加一条（版本号、月份、一句话概括、App Store 的 What's New 条目）。What's New 原文在 `../Prec/docs/RELEASE-x.x.md`。
